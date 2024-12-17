@@ -31,12 +31,12 @@
     border: 1px solid black; 
 }
 
-body{
+/* body{
     /* 
     font-family: "NEXT-Regular"; 
-    letter-spacing: 4px; */
+    letter-spacing: 4px; 
     
-}
+} */
 
 .header{
     background-image: url("../media/img/background-main.png");
@@ -140,12 +140,28 @@ section{
     flex-direction: column;
     width: 65%;
     margin: 20px auto 15px auto;
-
     height: 100vh;
+}
+
+.third-section h2{
+    width: fit-content;
 }
 
 .third-section__div{
     display: flex;
-    margin-top:25px;
     justify-content: space-around;
+    align-items: center;
+}
+
+.third-section__about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+.third-section__about-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
