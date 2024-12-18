@@ -125,7 +125,7 @@ section{
 }
 
 
-.second-section__bttn{
+.bttn{
     background-color: rgb(5, 115, 62);
     color: white;
     width: 170px;
@@ -138,30 +138,110 @@ section{
 .third-section{
     display: flex;
     flex-direction: column;
-    width: 65%;
-    margin: 20px auto 15px auto;
+    background-color: rgb(214, 233, 241);
     height: 100vh;
+    padding-top: 50px;
 }
 
 .third-section h2{
     width: fit-content;
+    margin-left: 328px;
 }
 
 .third-section__div{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 66%;
+    margin: 20px auto 15px auto; 
 }
 
 .third-section__about{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 50vh;
+    height: 100%;
 }
 
 .third-section__about-text{
     display: flex;
+    height: 10vw;
     flex-direction: row;
     justify-content: space-between;
 }
+
+.third-section__about-text div {
+    height: fit-content;
+    margin: auto;
+}
+
+.third-section__about-text img {
+    margin:auto 0 auto 0;
+    height: fit-content;
+}
+
+.third-section__bttn{
+    background-color: rgb(5, 115, 62);
+    color: white;
+    width: 200px;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    width: 300px;
+    height: 400px; /* Фиксированная высота карточки */
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Контент внизу */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-image: url('../media/img/landscape.png');
+  }
+  
+  
+  /* Полупрозрачный контент */
+  .card-content {
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+    backdrop-filter: blur(5px); /* Размытие фона */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Заголовок */
+  .card-title {
+    margin: 0 0 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Описание */
+  .card-description {
+    margin: 0 0 10px;
+    font-size: 14px;
+  }
+  
+  /* Цена */
+  .card-price {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
