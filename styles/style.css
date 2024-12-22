@@ -167,8 +167,11 @@ section {
 }
 
 .third-section__about-text div {
-  height: fit-content;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50px;
+  margin: auto 0 auto 5px;
 }
 
 .third-section__about-text img {
@@ -187,13 +190,24 @@ section {
 
 .fourth-section{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    width: 66%;
+    width: 60%;
+    height: 90vh;
     margin: auto;
 }
 
-.card {
+.fourth-section__text{
+  margin: 0 auto 0 auto;
+}
+
+.card-block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card{
   width: 350px;
   height: 500px;
   border-radius: 15px;
@@ -207,14 +221,14 @@ section {
   background-repeat: no-repeat;
 }
 
-/* Полупрозрачный контент */
 .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  height: 100px;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
-  backdrop-filter: blur(5px); /* Размытие фона */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(5px); 
   color: #fff;
 }
 
@@ -223,20 +237,20 @@ section {
     flex-direction: column;
 }
 
-/* Заголовок */
+
 .card-title {
   margin: 0 0 5px;
   font-size: 20px;
   font-weight: bold;
 }
 
-/* Описание */
+
 .card-description {
   margin: 0 0 10px;
   font-size: 14px;
 }
 
-/* Цена */
+
 .card-price {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.3);
@@ -244,4 +258,131 @@ section {
   padding: 5px 10px;
   font-size: 16px;
   font-weight: bold;
+}
+
+
+.fourth-section__bttn{
+  background-color: rgb(5, 115, 62);
+  color: white;
+  width: 200px;
+  border: none;
+  height: 50px;
+  border-radius: 5px;
+  margin: 0 auto 0 auto;
+}
+
+.fifth-section{
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  background-color: rgb(214, 233, 241);
+  height: 80vh;
+}
+
+.fifth-section__div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 66%;
+  height: 100%;
+  margin: 20px auto 15px auto;
+}
+
+
+/* .blog-block{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+}
+
+
+.blog-block div {
+  display: flex;
+  width: 55%;
+  flex-wrap: wrap; 
+}
+
+.blog-text{
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around;
+}
+
+.blog-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 10%;
+}  */
+
+
+
+.blog-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Сетка с адаптивными колонками */
+  gap: 20px; /* Расстояние между блоками */
+  padding: 20px; /* Внутренние отступы для контейнера */
+}
+
+.blog {
+  display: flex; /* Устанавливаем элементы в строку */
+  width: 525px; /* Ширина всей карточки */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.blog img {
+  width: 50%; /* Половина ширины для картинки */
+  height: auto;
+  border-radius: 10px 0 0 10px; /* Скругляем только левую часть */
+}
+
+.blog-text {
+  padding: 15px;
+  width: 50%; /* Половина ширины для текста */
+  display: flex;
+  flex-direction: column; /* Содержание выравнивается по вертикали */
+  justify-content: space-between; /* Равномерное распределение пространства */
+}
+
+.blog-text h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.blog-text p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+
+.blog-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+
+.blog-info a {
+  color: #f4b400;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #f4b400;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.blog-info a:hover {
+  background-color: #f4b400;
+  color: #fff;
 }
